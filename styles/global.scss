@@ -1,0 +1,31 @@
+body {
+  font: var(--t-b-1);
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-overflow-scrolling: touch;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.seo-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.cta {
+  cursor: pointer;
+  display: inline-block;
+  padding: var(--s-8) var(--s-16) var(--s-4) var(--s-16);
+  border: 1.3px solid;
+  border-radius: var(--s-10);
+  text-transform: uppercase;
+}

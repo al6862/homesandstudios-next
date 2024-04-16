@@ -1,0 +1,355 @@
+/*
+
+	U1 SETTINGS
+	U2 COLOR 
+	U3 TYPOGRAPHY
+	U4 LAYOUTS
+
+*/
+
+/*	U1 SETTINGS	*/
+@font-face {
+  font-family: 'Steinbeck';
+  src: url('/fonts/font-steinbeck-regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'SuisseNeueTrial-Light';
+  src: url('/fonts/font-suisse-neue-trial-light.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'GT-Zirkon';
+  src: url('/fonts/font-gt-zirkon-regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'GT-Zirkon-Italic';
+  src: url('/fonts/font-gt-zirkon-regular-Italic.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+}
+
+:root {
+  --cr-black: #000000;
+  --cr-white: #ffffff;
+  --cr-subtle: #f2f2f2;
+  --cr-ocean: #2d68c4;
+  --cr-sky: #e0f0ff;
+  --cr-orange: #ffa400;
+  --cr-yellow: #fcf951;
+  --cr-purple: #8c4799;
+  --cr-red: #ef3340;
+
+  --t-h-1: 400 48px/1.3 'SuisseNeueTrial-Light', Helvetica, sans-serif;
+  --t-h-2: 400 42px/1 'Steinbeck', Helvetica, sans-serif;
+  --t-h-3: 400 26px/1 'Steinbeck', Helvetica, sans-serif;
+  --t-h-4: 100 23px/1.4 'SuisseNeueTrial-Light', Helvetica, sans-serif;
+
+  --t-b-1: 400 14px/1.62 'GT-Zirkon', Helvetica, sans-serif;
+  --t-b-2: 400 12px/1.17 'GT-Zirkon', Helvetica, sans-serif;
+  --t-b-3: 400 10px/1.1725 'GT-Zirkon', Helvetica, sans-serif;
+  --t-bi-1: 400 14px/1.62 'GT-Zirkon-Italic', Helvetica, sans-serif;
+  --t-l-1: 400 18px/1 'Steinbeck', Helvetica, sans-serif;
+
+  --header-height: 65px;
+  --middle-bar-width: 50px;
+
+  --s-4: 4px;
+  --s-6: 6px;
+  --s-8: 8px;
+  --s-10: 10px;
+  --s-12: 12px;
+  --s-14: 14px;
+  --s-16: 16px;
+  --s-20: 20px;
+  --s-24: 24px;
+  --s-30: 30px;
+  --s-36: 36px;
+  --s-45: 45px;
+  --s-60: 60px;
+
+  --s-section: var(--s-6);
+  --s-section-half: var(--s-5);
+  --s-contain: 5vw;
+  --s-contain-max: 1600px;
+  --s-edge: var(--s-contain);
+
+  --a-panel: cubic-bezier(0.36, 0.07, 0.19, 0.97);
+  --a-bounce: cubic-bezier(0.5, -0.5, 0.5, 1.5);
+  --a-swift: cubic-bezier(0, 0.99, 0.6, 0.99);
+}
+
+@media screen and (max-width: 1200px) {
+  :root {
+    --t-h-1: 400 33px/1.1718 'SuisseNeueTrial-Light', Helvetica, sans-serif;
+    --t-h-2: 400 33px/1 'Steinbeck', Helvetica, sans-serif;
+    --t-h-4: 100 16px/1.4 'SuisseNeueTrial-Light', Helvetica, sans-serif;
+    --t-l-1: 400 14px/1 'Steinbeck', Helvetica, sans-serif;
+    --s-contain: 6vw;
+    --s-section: var(--s-4);
+    --s-section-half: var(--s-3);
+  }
+}
+
+@media screen and (max-width: 375px) {
+  :root {
+    --t-h-1: 400 24px/1.1718 'SuisseNeueTrial-Light', Helvetica, sans-serif;
+    --t-h-2: 400 24px/1 'Steinbeck', Helvetica, sans-serif;
+  }
+}
+
+@media screen and (min-width: 1777px) {
+  /*	update edge spacing when .c reaches its max width	*/
+
+  :root {
+    --s-edge: calc((100vw - var(--s-contain-max)) / 2);
+  }
+}
+
+@media (hover: hover) {
+  * {
+    outline-offset: 3px;
+    outline-color: transparent;
+  }
+}
+
+/*	U1 SETTINGS - END	*/
+
+/*	U2 COLOR	*/
+
+html {
+  color: var(--cr-black);
+}
+
+.cr-black {
+  color: var(--cr-black);
+}
+.cr-white {
+  color: var(--cr-white);
+}
+.cr-subtle {
+  color: var(--cr-subtle);
+}
+
+/*	U3 COLOR - END	*/
+
+/*	U3 TYPOGRAPHY	*/
+
+body {
+  font: var(--t-b-2);
+  line-height: 1;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: var(--t-h-1);
+}
+
+.t-h-1 {
+  font: var(--t-h-1);
+  letter-spacing: 0.63px;
+}
+
+.t-h-2 {
+  font: var(--t-h-2);
+  letter-spacing: -0.55px;
+}
+
+.t-h-3 {
+  font: var(--t-h-3);
+  letter-spacing: -0.34px;
+}
+
+.t-h-4 {
+  font: var(--t-h-4);
+  letter-spacing: 0.3px;
+}
+
+.t-b-1 {
+  font: var(--t-b-1);
+  letter-spacing: 0.18px;
+}
+.t-b-2 {
+  font: var(--t-b-2);
+  letter-spacing: 0.18px;
+}
+.t-b-3 {
+  font: var(--t-b-3);
+  letter-spacing: 0.13px;
+}
+
+.t-bi-1 {
+  font: var(--t-bi-1);
+  letter-spacing: 0.23px;
+}
+
+.t-l-1 {
+  font: var(--t-l-1);
+  letter-spacing: 0.04px;
+}
+
+/*	U3 TYPOGRAPHY - END	*/
+
+/*	U4 LAYOUTS	*/
+
+.type-spacing {
+  .t-l-1:not(:last-child) {
+    margin: 0 0 var(--s-2);
+  }
+
+  .t-h-1:not(:last-child),
+  .t-h-2:not(:last-child),
+  .t-h-3:not(:last-child),
+  .t-h-4:not(:last-child) {
+    margin: 0 0 var(--s-3);
+  }
+
+  .t-b-2:not(:last-child) {
+    margin: 0 0 var(--s-1);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .type-spacing {
+    .t-h-1:not(:last-child),
+    .t-h-2:not(:last-child),
+    .t-h-3:not(:last-child) {
+      margin: 0 0 var(--s-2);
+    }
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  /*	cap full width content at 2000px so that it doesn't infinitely extend	*/
+
+  html {
+    background-color: var(--cr-subtle);
+  }
+  body {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.c,
+.c-1,
+.c-2,
+.c-3,
+.c-4 {
+  /* c for contain */
+  position: relative;
+  width: calc(100vw - var(--s-contain) * 2);
+  max-width: var(--s-contain-max);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c-1 {
+  max-width: 1280px;
+}
+
+.c-2 {
+  max-width: 900px;
+}
+
+.c-3 {
+  max-width: 600px;
+}
+
+.c-4 {
+  max-width: 450px;
+}
+
+.f-h,
+.f-h-top,
+.f-h-center,
+.f-h-bottom {
+  /* f for flex */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.f-h-top {
+  align-items: flex-start;
+}
+
+.f-h-center {
+  align-items: center;
+}
+
+.f-h-bottom {
+  align-items: flex-end;
+}
+
+.f-v,
+.f-v-middle {
+  /* f, v for flex vertical */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.f-v-middle {
+  justify-content: center;
+}
+
+.p-fill {
+  /* p for position */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.p-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.avoid-style-flash {
+  visibility: hidden;
+}
+
+.user-select-disable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.screen-reader-only {
+  position: absolute !important;
+  left: -10000px !important;
+  top: auto !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+
+.clear-float:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+/*	U4 LAYOUTS - END	*/
